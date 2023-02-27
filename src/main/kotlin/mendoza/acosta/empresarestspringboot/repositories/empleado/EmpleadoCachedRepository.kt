@@ -1,4 +1,4 @@
-package mendoza.acosta.empresarestspringboot.repositories
+package mendoza.acosta.empresarestspringboot.repositories.empleado
 
 import kotlinx.coroutines.flow.Flow
 import mendoza.acosta.empresarestspringboot.models.Empleado

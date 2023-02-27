@@ -1,4 +1,4 @@
-package mendoza.acosta.empresarestspringboot.repositories
+package mendoza.acosta.empresarestspringboot.repositories.empleado
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -76,7 +76,7 @@ class EmpleadoCachedRepositoryImp
         logger.info { "Repositorio de empleados deleteByUuid($uuid)" }
         val emp = repository.findByUuid(uuid).firstOrNull()
         emp?.let {
-            repository.deleteById(it.uuid)
+            repository.deleteById(it.id!!)
             return@withContext it
         }
         return@withContext null

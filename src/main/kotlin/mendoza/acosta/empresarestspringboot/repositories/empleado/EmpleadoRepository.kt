@@ -1,4 +1,4 @@
-package mendoza.acosta.empresarestspringboot.repositories
+package mendoza.acosta.empresarestspringboot.repositories.empleado
 
 import kotlinx.coroutines.flow.Flow
 import mendoza.acosta.empresarestspringboot.models.Empleado
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository
 import java.util.UUID
 
 @Repository
-interface EmpleadoRepository : CoroutineCrudRepository<Empleado, UUID> {
+interface EmpleadoRepository : CoroutineCrudRepository<Empleado, Long> {
     fun findByUuid(uuid: UUID): Flow<Empleado>
     fun findByNombreContainsIgnoreCase(nombre: String): Flow<Empleado>
 }
