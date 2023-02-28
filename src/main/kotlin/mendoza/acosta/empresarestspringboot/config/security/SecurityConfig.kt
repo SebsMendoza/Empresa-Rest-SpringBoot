@@ -44,6 +44,7 @@ class SecurityConfig
             .and()
             .authorizeHttpRequests()
             .requestMatchers("/error/**").permitAll()
+            .requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
             .requestMatchers("/api/**")
             .permitAll()
             .requestMatchers("usuarios/login", "usuarios/register").permitAll()
